@@ -1,5 +1,9 @@
 var collective;
 var count = 0;
+document.getElementById("newGame").style.display = "none";
+document.getElementById("instructions").style.display = "none";
+document.getElementById("rules").style.display = "none";
+
 function startNewGame() {
 /*randomly selects a 4 digit array between 0-9
  *Reset guess count
@@ -13,13 +17,23 @@ function startNewGame() {
 	var digit4 = Math.floor(Math.random() *10).toString();
     var display = digit1+digit2+digit3+digit4;
     collective = display.split("");
-	count = 0;
+	count = 0; 
 //document.getElementById("random").innerHTML = collective;
 document.getElementById("guess").value = "";
 document.getElementById("submitButton").disabled = true;
 document.getElementById("answer").innerHTML = "";
 document.getElementById("count").innerHTML = "";
+document.getElementById("newGame").style.display = "block";
+document.getElementById("instructions").style.display = "block";
 
+}
+function instruct() {
+    var rules  = document.getElementById("rules"); 
+    if (rules.style.display === "none") {
+        rules.style.display = "block";
+    } else {
+        rules.style.display = "none";
+    }
 }
 
 function validateInput() {

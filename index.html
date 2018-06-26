@@ -12,27 +12,32 @@
 	<div class="name">
         <h1>Guess the Sequence of 4 Numbers: 0-9</h1>
     </div>
-    <div class="instructions">
-        <p> 1. Press "Start New Game" Button</p>
-        <p> 2. Enter your guess</p>
-        <p> 3. Press "Submit Guess"</p>
-        <p> 4. Keep entering new guesses and sumbitting until you've won.</p>
-    </div>
     <div class="start">
         <button class="startgame" type="button" onclick="startNewGame()" value = "Reset form">Start New Game</button>
     </div>
     <div id="random"></div><br>
-    <div>
-        <label for="guess">Enter Your 4 Digit Guess:Numbers can be 0-9</label>
+        <div id="newGame">
+        <div>
+            <label for="guess">Enter Your 4 Digit Guess:Numbers can be 0-9</label>
+        </div>
+        <div class="text-box">
+              <input type="text" oninput="validateInput()" id="guess" maxlength="4" size="4">
+        </div>
+        <button class="submit" disabled type="button" onclick="submitGuess()" id="submitButton">Submit Guess</button>
+        <div id="answer"></div>
+        <div id="count"></div>
+        <p>"B" means: You have a correct Number in the correct position.</p>
+        <p>"W" means: You have a correct Number but Not in the correct location.</p>
     </div>
-    <div class="text-box">
-		  <input type="text" oninput="validateInput()" id="guess" maxlength="4" size="4">
+    <div id="instructions">
+        <button class="showInstructions" type="button" onclick="instruct()">Show Instructions</button>
+        <div id="rules">
+            <p> 1. Press "Start New Game" Button</p>
+            <p> 2. Enter your guess</p>
+            <p> 3. Press "Submit Guess"</p>
+            <p> 4. Keep entering new guesses and sumbitting until you've won.</p>
+        </div>
     </div>
-    <button class="submit" disabled type="button" onclick="submitGuess()" id="submitButton">Submit Guess</button>
-    <div id="answer"></div>
-    <div id="count"></div>
-    <p>"B" means: You have a correct Number in the correct position.</p>
-    <p>"W" means: You have a correct Number but Not in the correct location.</p>
 <script src="script/webactions.js"></script>
 </body>
 </html>
