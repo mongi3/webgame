@@ -1,16 +1,16 @@
 var collective;
 var count = 0;
-function startNewGame(){
+function startNewGame() {
 /*randomly selects a 4 digit array between 0-9
  *Reset guess count
  *clear display
  *reset() came from w3school Form reset() Method
  *var random came from chapter 10 example 10
  */
-    var digit1 = Math.floor(Math.random()*10).toString();
-	var digit2 = Math.floor(Math.random()*10).toString();
-	var digit3 = Math.floor(Math.random()*10).toString();
-	var digit4 = Math.floor(Math.random()*10).toString();
+    var digit1 = Math.floor(Math.random() *10).toString();
+	var digit2 = Math.floor(Math.random() *10).toString();
+	var digit3 = Math.floor(Math.random() *10).toString();
+	var digit4 = Math.floor(Math.random() *10).toString();
     var display = digit1+digit2+digit3+digit4;
     collective = display.split("");
 	count = 0;
@@ -22,12 +22,12 @@ document.getElementById("count").innerHTML = "";
 
 }
 
-function validateInput(){
+function validateInput() {
 /*make button clickable only when valid
  *4 digit and each digit being 0-9
  */
   var text = document.getElementById("guess").value;
-  if (text.search(/\d\d\d\d/) == 0){
+  if (text.search(/\d\d\d\d/) == 0) {
     document.getElementById("submitButton").disabled = false;
   }
   else {
@@ -35,7 +35,7 @@ function validateInput(){
   }
 	
 }
-function submitGuess(){
+function submitGuess() {
 /*onclick button: Submit Guess button
  *get user input from text box
  *counts how many times user presses 'submit answer' until they win
@@ -48,12 +48,12 @@ function submitGuess(){
  */
   count++;
   collective;
-  var userGuess= document.getElementById("guess").value;
+  var userGuess = document.getElementById("guess").value;
   var output = checkAnswer(collective, userGuess);
   if (output == "BBBB"){
     output = "Congratulation! It took " + count + " guesses.";	
   }
-  if (output == ""){
+  if (output == "") {
     output = "Try again.";
   }
   //document.getElementById("count").innerHTML = count;
@@ -85,7 +85,7 @@ function checkAnswer(random, userGuess){
 	 for(var ii=0; ii < userGuess.length; ii++) {
 	   // match digit ii against all other digits
 		for(var jj=0; jj < random.length; jj++) {
-            if (random[jj] == userGuess[ii]){
+            if (random[jj] == userGuess[ii]) {
 			    random[jj] = "x";
 				userGuess[ii] = "a";
 			    output += "W";
