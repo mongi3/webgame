@@ -30,7 +30,15 @@ button:hover {
     margin: 5px;
 }
 
-#answer
+#answer{
+    background: cadetblue;
+    max-width: 50%;
+    line-height: 50px;
+    margin: auto;
+    border: 10px double white;
+    color: white;
+    font-size: 40px;
+}
 
 .bw {
     max-width: 75%;
