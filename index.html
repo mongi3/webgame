@@ -17,27 +17,27 @@
     </div>
     <div id="random"></div><br>
         <div id="newGame">
-        <div>
-            <label for="guess">Enter Your 4 Digit Guess:Numbers can be 0-9</label>
+            <div>
+                <label for="guess">Enter Your 4 Digit Guess:Numbers can be 0-9</label>
+            </div>
+            <div class="text-box">
+                  <input type="text" oninput="validateInput()" onkeyup="validateInput" id="guess" maxlength="4" size="4">
+            </div>
+            <button class="submit" disabled type="button" onclick="submitGuess()" onkeyup="validateInput()" id="submitButton">Submit Guess</button>
+            <div id="answer"></div>
+            <div id="banswer"></div>
+            <div id="wanswer"></div>
+            <div id="count"></div>
         </div>
-        <div class="text-box">
-              <input type="text" oninput="validateInput()" id="guess" maxlength="4" size="4">
-        </div>
-        <button class="submit" disabled type="button" onclick="submitGuess()" id="submitButton">Submit Guess</button>
-        <div id="answer"></div>
-        <div id="count"></div>
-        <p>"B" means: You have a correct Number in the correct position.</p>
-        <p>"W" means: You have a correct Number but Not in the correct location.</p>
-    </div>
     <div id="instructions">
-        <button class="showInstructions" type="button" onclick="instruct()">Show Instructions</button>
+        <button class="showInstructions" type="button" onclick="instruct()">Help Tips</button>
         <div id="rules">
-            <p> 1. Press "Start New Game" Button</p>
-            <p> 2. Enter your guess</p>
-            <p> 3. Press "Submit Guess"</p>
-            <p> 4. Keep entering new guesses and sumbitting until you've won.</p>
+            <p> 1. Numbers can repeat: Example Set - 0105</p>
+            <p> 2. Exactly Correct means, the digit is correct and in the correct position</p>
+            <p> 3. Almost Correct means, the digit is correct but not in the correct position</p>
         </div>
     </div>
 <script src="script/webactions.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 </html>

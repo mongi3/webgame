@@ -17,7 +17,9 @@ button {
     font-size: 20px;
     margin: 10px;
     border: 10px outset #0D8386;
-    
+}
+.submit:disabled {
+    background-color: gray;
 }
 button:hover {
     box-shadow: 10px 10px 20px #06123A;
@@ -30,7 +32,8 @@ button:hover {
     margin: 5px;
 }
 
-#answer{
+#answer, #banswer, #wanswer{
+    position: relative;
     background: cadetblue;
     max-width: 50%;
     line-height: 50px;

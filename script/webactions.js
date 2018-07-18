@@ -41,13 +41,12 @@ function validateInput() {
  *4 digit and each digit being 0-9
  */
   var text = document.getElementById("guess").value;
-  if (text.search(/\d\d\d\d/) == 0) {
-    document.getElementById("submitButton").disabled = false;
-  }
-  else {
-    document.getElementById("submitButton").disabled = true;
-  }
-	
+      if (text.search(/\d\d\d\d/) == 0) {
+        document.getElementById("submitButton").disabled = false;
+      }
+      else {
+        document.getElementById("submitButton").disabled = true;
+      }
 }
 function submitGuess() {
 /*onclick button: Submit Guess button
@@ -64,14 +63,42 @@ function submitGuess() {
   collective;
   var userGuess = document.getElementById("guess").value;
   var output = checkAnswer(collective, userGuess);
+    var original_output = output;
   if (output == "BBBB"){
-    output = "Congratulation! It took " + count + " guesses.";	
+    output = "Congratulations! <br> It took " + count + " guesses. <br> Now, see if you can beat that Score!";	
   }
-  if (output == "") {
+  else if (output == "") {
     output = "Try again.";
   }
-  //document.getElementById("count").innerHTML = count;
+    else {
+        output = "";
+    }
+ 
+     var bcount = "";
+          for (var b = 0; b < original_output.length; ++b){
+              if (original_output[b] == "B")
+                bcount++;
+          }
+              if (bcount == 1){
+                  bcount = bcount + " Digit Exactly Correct";
+                }
+              if (bcount > 1){
+                  bcount = bcount + " Digits Exactly Correct";
+          }
+      var wcount = "";
+          for (var w = 0; w < original_output.length; ++w){
+              if (original_output[w] == "W")
+                wcount++;
+          }
+              if (wcount == 1){
+                  wcount = wcount + " Digit Almost Correct";
+                }
+              if (wcount > 1){
+                  wcount = wcount + " Digits Almost Correct";
+          }
   document.getElementById("answer").innerHTML = output;
+  document.getElementById("banswer").innerHTML = bcount;
+  document.getElementById("wanswer").innerHTML = wcount;
   
 }
 
