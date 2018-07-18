@@ -145,6 +145,7 @@ function init() {
         submitGuess();
         return false;
     });
+    $('#myform').attr('autocomplete','off');
 }
 
 $(init);
