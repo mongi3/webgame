@@ -10,6 +10,9 @@ body{
     margin: 20px;
     border: 10px double aliceblue;
 }
+.startgame{
+    padding: 2px;
+}
 button {
     background-color: cadetblue;
     color: aliceblue;
