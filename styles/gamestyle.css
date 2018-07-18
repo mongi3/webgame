@@ -22,6 +22,7 @@ button {
     border: 10px outset #0D8386;
 }
 .submit:disabled {
+    border-color: gray;
     background-color: gray;
 }
 button:hover {
@@ -42,12 +43,15 @@ button:hover {
     line-height: 50px;
     margin: auto;
     overflow: wrap;
-    border: 10px double white;
     color: white;
-    font-size: 30px;
-    
+    font-size: 30px; 
 }
-
+#banswer{
+    background-color: #005F47;   
+}
+#wanswer{
+    background-color: #CA8D00;   
+}
 .bw {
     max-width: 75%;
     text-align: center;
