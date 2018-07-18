@@ -19,13 +19,14 @@ function startNewGame() {
     collective = display.split("");
 	count = 0; 
 //document.getElementById("random").innerHTML = collective;
-document.getElementById("guess").value = "";
-document.getElementById("submitButton").disabled = true;
-document.getElementById("answer").innerHTML = "";
-document.getElementById("count").innerHTML = "";
-document.getElementById("newGame").style.display = "block";
-document.getElementById("instructions").style.display = "block";
-
+    document.getElementById("guess").value = "";
+    document.getElementById("submitButton").disabled = true;
+    document.getElementById("answer").innerHTML = "";
+    document.getElementById("count").innerHTML = "";
+    document.getElementById("newGame").style.display = "block";
+    document.getElementById("instructions").style.display = "block";
+    document.getElementById("banswer").innerHTML = "";
+    document.getElementById("wanswer").innerHTML = "";
 }
 function instruct() {
     var rules  = document.getElementById("rules"); 
@@ -135,5 +136,15 @@ function checkAnswer(random, userGuess){
 		}
 	
 	}
-return output;
+    return output;
 }
+
+function init() {
+    $("#myform").submit(function(event) {
+        event.preventDefault();
+        submitGuess();
+        return false;
+    });
+}
+
+$(init);

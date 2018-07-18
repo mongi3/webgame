@@ -17,13 +17,15 @@
     </div>
     <div id="random"></div><br>
         <div id="newGame">
+            <form id="myform">
                 <div>
                     <label for="guess">Enter Your 4 Digit Guess:Numbers can be 0-9</label>
                 </div>
                 <div class="text-box">
-                      <input type="text" oninput="validateInput()" onkeyup="validateInput" id="guess" maxlength="4" size="4">
+                      <input type="text" oninput="validateInput()" id="guess" maxlength="4" size="4">
                 </div>
-                <button class="submit" disabled type="button" onclick="submitGuess()" onkeyup="validateInput()" id="submitButton">Submit Guess</button>
+                <button class="submit" disabled type="button" onclick="submitGuess()" id="submitButton">Submit Guess</button>
+            </form>
             <div id="answer"></div>
             <div id="banswer"></div>
             <div id="wanswer"></div>
@@ -37,7 +39,7 @@
             <p> 3. Almost Correct means, the digit is correct but not in the correct position</p>
         </div>
     </div>
-<script src="script/webactions.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script/webactions.js"></script>
 </body>
 </html>
