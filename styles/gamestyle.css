@@ -39,13 +39,12 @@ button:hover {
 #answer, #banswer, #wanswer{
     position: relative;
     background: cadetblue;
-    max-width: 75%;
+    max-width: 50%;
     line-height: 50px;
     margin: auto;
     overflow: wrap;
     color: white;
     font-size: 30px;
-    padding: 10px;
 }
 #banswer{
     background-color: #005F47;   
