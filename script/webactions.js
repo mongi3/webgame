@@ -65,7 +65,7 @@ function submitGuess() {
   var output = checkAnswer(collective, userGuess);
     var original_output = output;
   if (output == "BBBB"){
-    output = "Congratulations! <br> It took " + count + " guesses. <br> Now, see if you can beat that Score!";	
+    output = "Congratulations! <br> It took <br> " + count + " guesses. <br> Now, see if you can beat that Score!";	
   }
   else if (output == "") {
     output = "Try again.";
